@@ -1,0 +1,14 @@
+---
+macros:
+  acts_as_list:
+    include:
+    - "::ActiveRecord::Acts::List::InstanceMethods"
+    - "::ActiveRecord::Acts::List::NoUpdate"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended: {}

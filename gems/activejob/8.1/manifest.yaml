@@ -1,0 +1,4 @@
+dependencies:
+  - name: bigdecimal
+  - name: date
+  - name: singleton

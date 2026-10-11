@@ -1,0 +1,6 @@
+dependencies:
+  - name: delegate
+  - name: did_you_mean
+  - name: minitest
+  - name: monitor
+  - name: singleton

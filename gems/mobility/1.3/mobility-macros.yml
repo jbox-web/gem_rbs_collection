@@ -1,0 +1,73 @@
+---
+macros:
+  option_reader:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: true
+    instance_from_argument: false
+    accessors_from_arguments: false
+  include_cache:
+    include:
+    - "::Mobility::Backends::KeyValue::Cache"
+    - "::Mobility::Backends::Table::Cache"
+    - "::Mobility::Plugins::Cache::BackendMethods"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  initialize:
+    include:
+    - "::Mobility::Plugins::Backend::InstanceMethods"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  define_locale_reader:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  define_locale_writer:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::Mobility":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::Mobility::Backend::ConfiguredBackend":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

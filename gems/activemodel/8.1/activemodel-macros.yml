@@ -1,0 +1,32 @@
+---
+macros:
+  has_secure_password:
+    include:
+    - "::ActiveModel::Validations"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::ActiveModel::Callbacks":
+    include:
+    - "::ActiveSupport::Callbacks"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::ActiveModel::Naming":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

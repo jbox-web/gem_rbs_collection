@@ -1,0 +1,34 @@
+---
+macros:
+  devise_group:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  add_module:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - "?"
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  devise:
+    include:
+    - "::Devise::Orm"
+    - "::Devise::Models::Authenticatable"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended: {}

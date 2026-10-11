@@ -1,0 +1,183 @@
+---
+macros:
+  acts_as_taggable:
+    include:
+    - "::ActsAsTaggableOn::Taggable::Core"
+    - "::ActsAsTaggableOn::Taggable::Collection"
+    - "::ActsAsTaggableOn::Taggable::Caching"
+    - "::ActsAsTaggableOn::Taggable::Ownership"
+    - "::ActsAsTaggableOn::Taggable::Related"
+    extend: []
+    singleton_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  acts_as_ordered_taggable:
+    include:
+    - "::ActsAsTaggableOn::Taggable::Core"
+    - "::ActsAsTaggableOn::Taggable::Collection"
+    - "::ActsAsTaggableOn::Taggable::Caching"
+    - "::ActsAsTaggableOn::Taggable::Ownership"
+    - "::ActsAsTaggableOn::Taggable::Related"
+    extend: []
+    singleton_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  acts_as_taggable_on:
+    include:
+    - "::ActsAsTaggableOn::Taggable::Core"
+    - "::ActsAsTaggableOn::Taggable::Collection"
+    - "::ActsAsTaggableOn::Taggable::Caching"
+    - "::ActsAsTaggableOn::Taggable::Ownership"
+    - "::ActsAsTaggableOn::Taggable::Related"
+    extend: []
+    singleton_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  acts_as_ordered_taggable_on:
+    include:
+    - "::ActsAsTaggableOn::Taggable::Core"
+    - "::ActsAsTaggableOn::Taggable::Collection"
+    - "::ActsAsTaggableOn::Taggable::Caching"
+    - "::ActsAsTaggableOn::Taggable::Ownership"
+    - "::ActsAsTaggableOn::Taggable::Related"
+    extend: []
+    singleton_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  acts_as_taggable_tenant:
+    include:
+    - "::ActsAsTaggableOn::Taggable::Core"
+    - "::ActsAsTaggableOn::Taggable::Collection"
+    - "::ActsAsTaggableOn::Taggable::Caching"
+    - "::ActsAsTaggableOn::Taggable::Ownership"
+    - "::ActsAsTaggableOn::Taggable::Related"
+    extend: []
+    singleton_methods:
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_methods:
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  taggable_on:
+    include:
+    - "::ActsAsTaggableOn::Taggable::Core"
+    - "::ActsAsTaggableOn::Taggable::Collection"
+    - "::ActsAsTaggableOn::Taggable::Caching"
+    - "::ActsAsTaggableOn::Taggable::Ownership"
+    - "::ActsAsTaggableOn::Taggable::Related"
+    extend: []
+    singleton_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_methods:
+    - tag_types
+    - tag_types=
+    - tag_types?
+    - preserve_tag_order
+    - preserve_tag_order=
+    - preserve_tag_order?
+    - tenant_column
+    - tenant_column=
+    - tenant_column?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended: {}

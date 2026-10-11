@@ -1,0 +1,76 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Regenerates every gem of this repository for a project, reading what
+# bin/generate needs in the project itself rather than in a hand-kept list:
+#
+# - the versions, in its Gemfile.lock — the Rails gems take Rails' version;
+# - the source directories, from `bundle list --paths` — a git gem lives under
+#   `bundler/gems/<name>-<sha>`, whose sha changes with every update;
+# - what to defer to: rigor's plugin signatures and the `sig/` the bundled
+#   gems ship;
+# - what to resolve names against: the bundled gems' `sig/`, and the gems the
+#   project's rbs collection installs from other sources.
+#
+# The gems beside Rails are listed in targets.yml.
+#
+# Usage:
+#   bin/regenerate PROJECT_DIR
+
+require 'bundler'
+require 'open3'
+require 'yaml'
+
+RAILS_GEMS = [
+  'activesupport', 'activemodel', 'activerecord', 'actionpack', 'actionview', 'activejob',
+  'railties', 'actionmailer', 'activestorage', 'actioncable', 'actiontext',
+].freeze
+
+root    = File.expand_path('..', __dir__)
+project = File.expand_path(ARGV.fetch(0) { abort 'usage: bin/regenerate PROJECT_DIR' })
+targets = YAML.load_file(File.join(root, 'targets.yml')).fetch('gems')
+
+# The lockfile's `path:` sources resolve against the project's Gemfile.
+ENV['BUNDLE_GEMFILE'] = File.join(project, 'Gemfile')
+lockfile = Bundler::LockfileParser.new(File.read(File.join(project, 'Gemfile.lock')))
+specs    = lockfile.specs.to_h { |spec| [spec.name, spec] }
+
+paths, status = Open3.capture2('bundle', 'list', '--paths', chdir: project)
+abort 'bundle list --paths failed' unless status.success?
+paths = paths.lines.map(&:strip)
+
+# The directory a gem is installed in: `<name>-<version>`, or
+# `<name>-<short sha>` for a gem from a git source, `<name>-<version>-<platform>`
+# for a native gem.
+source_directory = lambda do |name|
+  spec      = specs.fetch(name) { abort "#{name} is not in #{project}/Gemfile.lock" }
+  revision  = spec.source.respond_to?(:revision) ? spec.source.revision.to_s[0, 12] : nil
+  basenames = ["#{name}-#{spec.version}", ("#{name}-#{revision}" if revision)].compact
+  # A native gem carries its platform: `nokogiri-1.19.4-arm64-darwin`.
+  paths.find { |path| basenames.include?(File.basename(path)) } ||
+    paths.find { |path| File.basename(path).start_with?("#{name}-#{spec.version}-") } ||
+    abort("no installed directory for #{name}")
+end
+
+rails   = specs.fetch('rails').version.to_s
+rigor   = Gem::Specification.find_by_name('rigortype').gem_dir
+shipped = paths.map { |path| File.join(path, 'sig') }.select { |dir| File.directory?(dir) }
+
+arguments = ['--gems-dir', File.dirname(source_directory.call('activesupport')), '--rails', rails]
+targets.each do |name|
+  arguments += ['--gem', "#{name}:#{specs.fetch(name).version}:#{source_directory.call(name)}"]
+end
+(Dir.glob(File.join(rigor, 'plugins', '*', 'sig')) + [File.join(rigor, 'data', 'gem_overlay')] + shipped).each do |dir|
+  arguments += ['--defer-to', dir]
+end
+shipped.each { |dir| arguments += ['--resolve-with', dir] }
+
+# The project's collection, minus the gems regenerated here: their old copy
+# would collide with the new one.
+generated = RAILS_GEMS + targets
+Dir.glob(File.join(project, '.gem_rbs_collection', '*', '*')).each do |dir|
+  arguments += ['--resolve-with', dir] unless generated.include?(File.basename(File.dirname(dir)))
+end
+
+env = { 'LANG' => 'en_US.UTF-8', 'LC_ALL' => 'en_US.UTF-8' }
+exec(env, File.join(root, 'bin', 'generate'), *arguments, *RAILS_GEMS)

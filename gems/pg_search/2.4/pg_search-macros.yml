@@ -1,0 +1,28 @@
+---
+macros:
+  pg_search_scope:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: true
+    instance_from_argument: false
+    accessors_from_arguments: false
+  multisearchable:
+    include:
+    - "::PgSearch::Multisearchable"
+    extend: []
+    singleton_methods:
+    - pg_search_multisearchable_options
+    - pg_search_multisearchable_options=
+    - pg_search_multisearchable_options?
+    instance_methods:
+    - pg_search_multisearchable_options
+    - pg_search_multisearchable_options=
+    - pg_search_multisearchable_options?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended: {}

@@ -1,0 +1,30 @@
+---
+macros:
+  register:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  subcommand:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  argument:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: accessor
+extended: {}

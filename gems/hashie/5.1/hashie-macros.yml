@@ -1,0 +1,72 @@
+---
+macros:
+  stringify_keys_recursively!:
+    include: []
+    extend:
+    - "::Hashie::Extensions::StringifyKeys"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  stringify_keys!:
+    include: []
+    extend:
+    - "::Hashie::Extensions::StringifyKeys"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  stringify_keys:
+    include: []
+    extend:
+    - "::Hashie::Extensions::StringifyKeys"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  symbolize_keys_recursively!:
+    include: []
+    extend:
+    - "::Hashie::Extensions::SymbolizeKeys"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  symbolize_keys!:
+    include: []
+    extend:
+    - "::Hashie::Extensions::SymbolizeKeys"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  symbolize_keys:
+    include: []
+    extend:
+    - "::Hashie::Extensions::SymbolizeKeys"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::Hashie::Extensions::Mash::DefineAccessors":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

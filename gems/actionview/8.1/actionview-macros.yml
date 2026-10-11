@@ -1,0 +1,33 @@
+---
+macros:
+  layout:
+    include:
+    - "::ActionView::Layouts::ClassMethods::LayoutConditions"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  register_detail:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    - "="
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::ActionView::Template::Handlers":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

@@ -1,0 +1,34 @@
+---
+macros:
+  assert_class_method:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  assert_instance_method:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::Rails::LineFiltering":
+    include: []
+    extend:
+    - "::Rails::LineFiltering::MT5"
+    - "::Rails::LineFiltering::MT6"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

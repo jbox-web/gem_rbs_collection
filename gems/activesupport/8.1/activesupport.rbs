@@ -1,0 +1,12 @@
+# Hand-written: Class#descendants, from active_support/core_ext/class/subclasses.
+# The generation leaves core_ext/ to the rigor-activesupport-core-ext plugin,
+# which does not declare this one.
+class Class
+  def descendants: () -> Array[Class]
+end
+
+# Hand-written: the top-level alias hash_with_indifferent_access.rb ends on
+# (`HashWithIndifferentAccess = ActiveSupport::HashWithIndifferentAccess`),
+# which the generation reads as an untyped constant — unusable as a type, and
+# shakapacker's own sig/ names it as one (Shakapacker::Configuration).
+class HashWithIndifferentAccess = ::ActiveSupport::HashWithIndifferentAccess

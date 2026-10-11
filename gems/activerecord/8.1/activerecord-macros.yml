@@ -1,0 +1,123 @@
+---
+macros:
+  composed_of:
+    include:
+    - "::ActiveRecord::Aggregations"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  reader_method:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  primary_key=:
+    include:
+    - "::ActiveRecord::AttributeMethods::CompositePrimaryKey"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  define_non_cyclic_method:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  add_autosave_association_callbacks:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  define_autosave_validation_callbacks:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  accepts_nested_attributes_for:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  generate_association_writer:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  attr_readonly:
+    include:
+    - "::ActiveRecord::ReadonlyAttributes::HasReadonlyAttributes"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  initialize_relation_delegate_cache:
+    include:
+    - "::ActiveRecord::Delegation::ClassSpecificRelation"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "[]":
+    include:
+    - "::ActiveRecord::Schema::Definition"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::ActiveRecord::Enum":
+    include: []
+    extend: []
+    singleton_methods:
+    - defined_enums
+    - defined_enums=
+    - defined_enums?
+    instance_methods:
+    - defined_enums
+    - defined_enums?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

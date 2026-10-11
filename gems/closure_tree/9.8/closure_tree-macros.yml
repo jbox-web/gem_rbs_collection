@@ -1,0 +1,32 @@
+---
+macros:
+  has_closure_tree:
+    include:
+    - "::ClosureTree::HierarchyMaintenance"
+    - "::ClosureTree::Model"
+    - "::ClosureTree::Finders"
+    - "::ClosureTree::HashTree"
+    - "::ClosureTree::Digraphs"
+    - "::ClosureTree::AssociationSetup"
+    - "::ClosureTree::DeterministicOrdering"
+    - "::ClosureTree::NumericDeterministicOrdering"
+    extend: []
+    singleton_methods:
+    - _ct
+    - _ct=
+    - _ct?
+    - hierarchy_class
+    - hierarchy_class=
+    - hierarchy_class?
+    instance_methods:
+    - _ct
+    - _ct=
+    - _ct?
+    - hierarchy_class
+    - hierarchy_class=
+    - hierarchy_class?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended: {}

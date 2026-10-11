@@ -1,0 +1,10 @@
+dependencies:
+  - name: cgi
+  - name: date
+  - name: logger
+  - name: monitor
+  - name: singleton
+  - name: time
+  - name: tsort
+  - name: base64
+  - name: delegate

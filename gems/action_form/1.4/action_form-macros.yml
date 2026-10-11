@@ -1,0 +1,33 @@
+---
+macros:
+  attribute:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    - "="
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  association:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes:
+    - ''
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  virtual_attributes:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: accessor
+extended: {}

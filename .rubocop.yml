@@ -1,0 +1,77 @@
+---
+plugins:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 4.0
+  Exclude:
+    # Bundler binstubs
+    - bin/rspec
+    - bin/rubocop
+    # Generated RBS, macro indexes and manifests
+    - gems/**/*
+    # The bundle CI installs in the checkout (setup-ruby's bundler-cache): this
+    # list replaces RuboCop's default one, which leaves vendor/ out.
+    - vendor/**/*
+
+#########
+# STYLE #
+#########
+
+Style/Documentation:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Style/BlockDelimiters:
+  AllowedPatterns: ['expect']
+
+##########
+# LAYOUT #
+##########
+
+Layout/EmptyLines:
+  Enabled: false
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+#########
+# RSPEC #
+#########
+
+RSpec/NotToNot:
+  EnforcedStyle: to_not
+
+# bin/generate is a script: its spec has no class to name.
+RSpec/DescribeClass:
+  Exclude:
+    - spec/bin/generate_spec.rb

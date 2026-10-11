@@ -1,0 +1,4 @@
+dependencies:
+  - name: delegate
+  - name: forwardable
+  - name: uri

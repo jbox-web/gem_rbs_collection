@@ -1,0 +1,21 @@
+---
+macros: {}
+extended:
+  "::Rouge::Lexers::ObjectiveCCommon":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::Rouge::Lexers::TypescriptCommon":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

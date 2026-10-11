@@ -1,0 +1,25 @@
+# Hand-written: the module representable/json.rb really includes.
+# Its body says `include Hash`, which Ruby resolves while json.rb loads, before
+# representable/json/hash.rb — which requires json.rb — defines
+# Representable::JSON::Hash: it reaches Representable::Hash, and #to_hash with
+# it. RBS resolves the name against every declaration at once and picks
+# JSON::Hash, so the generated file includes that one; no reading of a single
+# file can tell the two apart.
+#
+# `represented` is the object a Decorator wraps — Decorator's attr_reader. A
+# Decorator subclass including JSON or Hash reaches Representable again through
+# their hooks, which Ruby skips (Decorator already includes it) but RBS does
+# not: Representable#represented, which returns self for a represented model,
+# would answer first, and `represented.camping_name` read as a call on the
+# decorator. Declared on the two modules, it answers before Representable's.
+module Representable
+  module JSON
+    include ::Representable::Hash
+
+    def represented: () -> untyped
+  end
+
+  module Hash
+    def represented: () -> untyped
+  end
+end

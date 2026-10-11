@@ -1,0 +1,11 @@
+# Hand-written: Tag and Tagging subclass `ActsAsTaggableOn.base_class.constantize`,
+# a superclass no generator can read — ActiveRecord::Base unless the
+# application configures another base class. Without it they would be plain
+# Objects, with none of the model API (create!, where…).
+module ActsAsTaggableOn
+  class Tag < ::ActiveRecord::Base
+  end
+
+  class Tagging < ::ActiveRecord::Base
+  end
+end

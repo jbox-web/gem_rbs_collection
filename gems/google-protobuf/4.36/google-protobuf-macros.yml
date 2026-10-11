@@ -1,0 +1,21 @@
+---
+macros:
+  define_array_wrapper_method:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+  define_array_wrapper_with_result_method:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: true
+    accessors_from_arguments: false
+extended: {}

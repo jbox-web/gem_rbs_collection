@@ -1,0 +1,49 @@
+---
+macros: {}
+extended:
+  "::Capybara::DSL":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::Capybara::Selenium::Driver::ChromeDriver":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::Capybara::Selenium::Driver::EdgeDriver":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::Capybara::Selenium::Driver::FirefoxDriver":
+    include: []
+    extend:
+    - "::Capybara::Selenium::Driver::W3CFirefoxDriver"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::Capybara::Selenium::Driver::W3CFirefoxDriver":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

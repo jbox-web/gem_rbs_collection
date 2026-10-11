@@ -1,0 +1,4 @@
+dependencies:
+  - name: did_you_mean
+  - name: erb
+  - name: ripper

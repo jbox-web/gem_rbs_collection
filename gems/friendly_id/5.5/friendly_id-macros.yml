@@ -1,0 +1,24 @@
+---
+macros:
+  friendly_id:
+    include:
+    - "::FriendlyId::Model"
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::FriendlyId":
+    include:
+    - "::FriendlyId::Model"
+    extend:
+    - "::FriendlyId::Base"
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

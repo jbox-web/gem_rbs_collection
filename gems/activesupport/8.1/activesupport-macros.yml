@@ -1,0 +1,21 @@
+---
+macros: {}
+extended:
+  "::ActiveSupport::LazyLoadHooks":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+  "::ActiveSupport::TaggedLogging::LocalTagStorage":
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

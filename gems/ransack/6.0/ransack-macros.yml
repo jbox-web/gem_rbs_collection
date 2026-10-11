@@ -1,0 +1,60 @@
+---
+macros:
+  ransackable_attributes:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: true
+    instance_from_argument: false
+    accessors_from_arguments: false
+  ransackable_associations:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: true
+    instance_from_argument: false
+    accessors_from_arguments: false
+  ransortable_attributes:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: true
+    instance_from_argument: false
+    accessors_from_arguments: false
+  deprecated_ransackable_list:
+    include: []
+    extend: []
+    singleton_methods: []
+    instance_methods: []
+    instance_suffixes: []
+    singleton_from_argument: true
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended:
+  "::Ransack::ActiveRecord::Base":
+    include: []
+    extend: []
+    singleton_methods:
+    - _ransackers
+    - _ransackers=
+    - _ransackers?
+    - _ransack_aliases
+    - _ransack_aliases=
+    - _ransack_aliases?
+    instance_methods:
+    - _ransackers
+    - _ransackers=
+    - _ransackers?
+    - _ransack_aliases
+    - _ransack_aliases=
+    - _ransack_aliases?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false

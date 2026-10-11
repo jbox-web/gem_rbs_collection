@@ -1,0 +1,6 @@
+dependencies:
+  - name: tsort
+  - name: did_you_mean
+  - name: fileutils
+  - name: minitest
+  - name: ripper

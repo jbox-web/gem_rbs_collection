@@ -1,0 +1,6 @@
+# Hand-written: Devise's module-level configuration readers, typed more
+# precisely than the generation can (it reads them as `untyped`).
+module Devise
+  def self.mappings: () -> Hash[Symbol, untyped]
+  def self.sign_in_after_change_password: () -> bool
+end

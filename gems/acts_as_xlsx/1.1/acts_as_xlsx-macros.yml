@@ -1,0 +1,25 @@
+---
+macros:
+  acts_as_xlsx:
+    include: []
+    extend:
+    - "::ActsAsXlsx::ClassMethods"
+    singleton_methods:
+    - xlsx_i18n
+    - xlsx_i18n=
+    - xlsx_i18n?
+    - xlsx_columns
+    - xlsx_columns=
+    - xlsx_columns?
+    instance_methods:
+    - xlsx_i18n
+    - xlsx_i18n=
+    - xlsx_i18n?
+    - xlsx_columns
+    - xlsx_columns=
+    - xlsx_columns?
+    instance_suffixes: []
+    singleton_from_argument: false
+    instance_from_argument: false
+    accessors_from_arguments: false
+extended: {}

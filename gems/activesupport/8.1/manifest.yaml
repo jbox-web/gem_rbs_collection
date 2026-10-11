@@ -1,0 +1,11 @@
+dependencies:
+  - name: date
+  - name: logger
+  - name: monitor
+  - name: openssl
+  - name: singleton
+  - name: time
+  - name: securerandom
+  - name: erb
+  - name: stringio
+  - name: minitest

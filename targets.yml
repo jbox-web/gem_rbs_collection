@@ -1,0 +1,60 @@
+# The gems bin/regenerate generates beside the eleven Rails gems: those
+# ruby/gem_rbs_collection has no RBS for, or RBS of an older version than the
+# one the project installs (major or minor).
+# Their versions and source directories are read in the project's bundle.
+# concurrent-ruby stays with the community collection: it picks its
+# implementations by Ruby engine at load time (`HashImplementation = case …`),
+# which no reading of the source resolves, and its hand-written RBS do.
+gems:
+  - acts-as-taggable-on
+  - friendly_id
+  - closure_tree
+  - pg_search
+  - acts_as_list
+  - action_form
+  - phlex
+  - phlex-rails
+  - capybara
+  - faraday
+  - sidekiq
+  - devise
+  - responders
+  - literal
+  - mobility
+  - money-rails
+  - ransack
+  - acts_as_xlsx
+  - draper
+  - representable
+  - warning
+  - activerecord-import
+  - connection_pool
+  - flipper
+  - mini_mime
+  - parallel
+  - rack
+  - redis
+  - rqrcode
+  - google-protobuf
+  - addressable
+  - caxlsx
+  - chartkick
+  - globalid
+  - hashie
+  - mail
+  - marcel
+  - rails-dom-testing
+  - rails-html-sanitizer
+  - request_store
+  - rubyzip
+  - thor
+  - i18n
+  - nokogiri
+  - rake
+  - recaptcha
+  - regexp_parser
+  - shrine
+  - mcp
+  - health_monitor
+  - prometheus_exporter
+  - rouge
